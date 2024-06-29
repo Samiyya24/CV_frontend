@@ -1,0 +1,79 @@
+<template>
+  <div class="container">
+
+    
+    <div class="py-20">
+      <h3 class="text-blue-950 text-center text-5xl font-semibold my-20" style="text-shadow: 0 0px 10px rgb(23, 37, 84, 0.4);">CV Templates</h3>
+      <swiper
+        :effect="'coverflow'"
+        :grabCursor="true"
+        :centeredSlides="true"
+        :slidesPerView="'auto'"
+        :loop="true"
+        :coverflowEffect="{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }"
+        :modules="modules"
+        class="mySwiper"
+      >
+        <swiper-slide>
+          <img @click="store.temp = '/template.png'" src="/template.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img @click="store.temp = '/template2.png'" src="/template2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img @click="store.temp = '/template3.png'" src="/template3.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img @click="store.temp = '/template4.png'" src="/template4.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img @click="store.temp = '/template5.png'" src="/template5.png" />
+        </swiper-slide>
+      </swiper>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css"; // Import Swiper styles
+import "swiper/css/effect-coverflow"; // Import Swiper coverflow effect styles
+import "swiper/css/pagination"; // Import Swiper pagination styles
+import { EffectCoverflow } from "swiper/modules"; // Import Swiper modules
+import { useStore } from "../store";
+
+const store = useStore();
+
+const modules = [EffectCoverflow];
+</script>
+
+<style scoped>
+/* Add your scoped styles here */
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  cursor: grab;
+}
+.swiper:active {
+  cursor: grabbing;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+</style>
