@@ -25,20 +25,23 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+  // const changeLocale = (selectedLocale) => {
+  //   locale.value = selectedLocale;
+  // };
 });
 
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
+
 </script>
 
 <template>
-  <div 
-  id="backColor" class="fixed z-10 top-0 left-0 w-full">
-  <div
-  :class="isScrolled ? 'backdrop-blur-lg bg-white/30' : 'bg-black/5'"
-  id="backBlur"
-  class="  flex justify-center"
+  <div id="backColor" class="fixed z-10 top-0 left-0 w-full">
+    <div
+      :class="isScrolled ? 'backdrop-blur-lg bg-white/30' : 'bg-black/5'"
+      id="backBlur"
+      class="flex justify-center"
     >
       <div class="container">
         <!-- Progress bar -->
@@ -71,19 +74,33 @@ onUnmounted(() => {
             >
             <a
               @click="handleClick"
-              class="text-lg text-blue-950   transition duration-700 hover:animate-bounce"
+              class="text-lg text-blue-950 transition duration-700 hover:animate-bounce"
               href="#"
               >Contact</a
             >
           </div>
           <!-- Login button -->
-          <button
-            id="contact"
-            @click="handleClick"
-            class="px-8 py-1.5 text-xl text-white  rounded-full transition-colors duration-300 hover:animate-wiggle"
-          >
-            Log In
-          </button>
+          <div class="flex gap-10">
+            <!-- <button class="text-white text-xl">
+              {{ $t("test") }}
+            </button>
+            <select
+              :value="$i18n.locale"
+              @change="changeLocale($event.target.value)"
+              class="border p-2 rounded"
+            >
+              <option value="en">English</option>
+              <option value="ru">Russian</option>
+              <option value="uz">Uzbek</option>
+            </select> -->
+            <button
+              id="contact"
+              @click="handleClick"
+              class="px-8 py-1.5 text-xl text-white rounded-full transition-colors duration-300 hover:animate-wiggle"
+            >
+              Log In
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -104,11 +121,11 @@ a {
 #backColor {
   background: linear-gradient(
     -45deg,
-    rgba(23, 37, 84, .9) 0%,
-    rgba(23, 37, 84, .9) 30%,
+    rgba(23, 37, 84, 0.9) 0%,
+    rgba(23, 37, 84, 0.9) 30%,
     rgba(255, 255, 255, 0) 30%,
     rgba(255, 255, 255, 0) 100%
-    );
+  );
 }
 
 #backBlur {
