@@ -9,25 +9,25 @@
         >
           <input
             type="text"
-            placeholder="Ваше имя"
-            class="p-3 text-blue-950 bg-white rounded-md w-[550px]  placeholder-[#C4C4C4] mt-5"
+            placeholder="Name"
+            class="p-3 text-blue-950 bg-white rounded-md w-[53%]  placeholder-[#C4C4C4] mt-5"
           />
           <input
             type="email"
-            placeholder="Ваш e-mail"
-            class="p-3 text-blue-950 w-[470px] bg-white rounded-md  placeholder-[#C4C4C4] mt-5"
+            placeholder="Email"
+            class="p-3 text-blue-950 w-[45%] bg-white rounded-md  placeholder-[#C4C4C4] mt-5"
           />
           <textarea
-            placeholder="Ваш отзыв"
+            placeholder="Your feedback"
             rows="3"
-            class="w-[370px] rounded p-3 bg-white text-blue-950 placeholder-[#C4C4C4] mt-5"
+            class="w-[35%] rounded p-3 bg-white text-blue-950 placeholder-[#C4C4C4] mt-5"
             style="resize: none"
           ></textarea>
           <div class="flex items-center justify-center">
-            <input
+            <input id="submit"
               type="submit"
               class="px-[33px] py-3 rounded-md bg-blue-900 mt-[30px] hover:text-[#fff] hover:shadow-none duration-300 shadow-lg"
-              value="Отправить отзыв"
+              value="Submit"
             />
           </div>
         </form>
@@ -89,5 +89,14 @@ form {
 
 #footer a:hover {
   color: #ccc;
+}
+
+#submit {
+  cursor: pointer;
+  box-shadow: 0 0 5px 0 rgba(225, 255, 255, 0.9);
+  text-shadow: 0 0px 10px rgb(255, 255, 255, 0.2);
+}
+#submit:hover {
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.9);
 }
 </style>
