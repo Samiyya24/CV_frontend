@@ -10,17 +10,17 @@
           <input
             type="text"
             placeholder="Ваше имя"
-            class="p-3 text-blue-950 bg-white rounded-md w-[550px]  placeholder-[#C4C4C4] mt-5"
+            class="p-3 text-blue-950 bg-white rounded-md w-[53%]  placeholder-[#C4C4C4] mt-5"
           />
           <input
             type="email"
             placeholder="Ваш e-mail"
-            class="p-3 text-blue-950 w-[470px] bg-white rounded-md  placeholder-[#C4C4C4] mt-5"
+            class="p-3 text-blue-950 w-[45%] bg-white rounded-md  placeholder-[#C4C4C4] mt-5"
           />
           <textarea
             placeholder="Ваш отзыв"
             rows="3"
-            class="w-[370px] rounded p-3 bg-white text-blue-950 placeholder-[#C4C4C4] mt-5"
+            class="w-[35%] rounded p-3 bg-white text-blue-950 placeholder-[#C4C4C4] mt-5"
             style="resize: none"
           ></textarea>
           <div class="flex items-center justify-center">

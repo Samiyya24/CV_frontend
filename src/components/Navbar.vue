@@ -34,6 +34,7 @@ onUnmounted(() => {
 
 <template>
   <div
+    id="backBlur"
     :class="isScrolled ? 'backdrop-blur-lg bg-white/30' : 'bg-black/5'"
     class="fixed z-10 top-0 left-0 w-full flex justify-center"
   >
@@ -96,5 +97,16 @@ onUnmounted(() => {
 }
 a {
   text-shadow: 0 0px 10px rgb(23, 37, 84, 0.2);
+}
+
+#backBlur {
+  @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+    #globalnav.globalnav-scrim.globalnav-dark,
+    .globalnav-scrim.globalheader-dark #globalnav,
+    .globalnav-scrim #globalnav.globalnav-dark,
+    .globalheader-dark #globalnav.globalnav-scrim {
+      --globalnav-background: rgba(22, 22, 23, 0.8);
+    }
+  }
 }
 </style>
