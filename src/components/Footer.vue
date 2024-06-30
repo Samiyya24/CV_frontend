@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="bg-blue-950 pt-[50px]">
+  <div id="contact" class="bg-blue-950 pt-[50px]">
     <div class="container text-[#fff] relative">
       <div class="flex items-center justify-between pb-10 flex-row-reverse relative">
         <!-- Form -->
@@ -57,7 +57,7 @@
 </template>
 
 <style scoped>
-#footer {
+#contact {
   /* Rotate the gradient by 45 degrees */
   background: linear-gradient(
     45deg,
@@ -83,11 +83,11 @@ form {
   );
 }
 
-#footer a {
+#contact a {
   color: #fff;
 }
 
-#footer a:hover {
+#contact a:hover {
   color: #ccc;
 }
 
