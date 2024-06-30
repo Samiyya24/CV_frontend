@@ -55,7 +55,7 @@ onUnmounted(() => {
           <img
             @click="handleClick"
             src="/logo.png"
-            class="w-[7%] cursor-pointer transition-transform duration-300 hover:animate-wiggle"
+            class="w-[7%] rounded-full cursor-pointer transition-transform duration-300 hover:animate-wiggle"
             alt="logo"
           />
           <!-- Navigation links -->
