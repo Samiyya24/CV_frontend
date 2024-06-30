@@ -1,9 +1,12 @@
 <template>
   <div class="container">
-
-    
     <div class="py-20">
-      <h3 class="text-blue-950 text-center text-5xl font-semibold my-20" style="text-shadow: 0 0px 10px rgb(23, 37, 84, 0.4);">CV Templates</h3>
+      <h3
+        class="text-blue-950 text-center text-5xl font-semibold my-20"
+        style="text-shadow: 0 0px 10px rgb(23, 37, 84, 0.4)"
+      >
+        CV Templates
+      </h3>
       <swiper
         :effect="'coverflow'"
         :grabCursor="true"
@@ -16,6 +19,10 @@
           depth: 100,
           modifier: 1,
           slideShadows: true,
+        }"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
         }"
         :modules="modules"
         class="mySwiper"
@@ -45,12 +52,12 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css"; // Import Swiper styles
 import "swiper/css/effect-coverflow"; // Import Swiper coverflow effect styles
 import "swiper/css/pagination"; // Import Swiper pagination styles
-import { EffectCoverflow } from "swiper/modules"; // Import Swiper modules
+import {Autoplay, EffectCoverflow } from "swiper/modules"; // Import Swiper modules
 import { useStore } from "../store";
 
 const store = useStore();
 
-const modules = [EffectCoverflow];
+const modules = [Autoplay, EffectCoverflow];
 </script>
 
 <style scoped>
