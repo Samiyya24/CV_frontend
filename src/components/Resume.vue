@@ -24,16 +24,16 @@
           <img @click="store.temp = '/template.png'" src="/template.png" />
         </swiper-slide>
         <swiper-slide>
-          <img @click="store.temp = '/template2.png'" src="/template2.png" />
+          <img @click="store.temp = '/template2.webp'" src="/template2.webp" />
         </swiper-slide>
         <swiper-slide>
-          <img @click="store.temp = '/template3.png'" src="/template3.png" />
+          <img @click="store.temp = '/template3.webp'" src="/template3.webp" />
         </swiper-slide>
         <swiper-slide>
           <img @click="store.temp = '/template4.png'" src="/template4.png" />
         </swiper-slide>
         <swiper-slide>
-          <img @click="store.temp = '/template5.png'" src="/template5.png" />
+          <img @click="store.temp = '/template5.webp'" src="/template5.webp" />
         </swiper-slide>
       </swiper>
     </div>
