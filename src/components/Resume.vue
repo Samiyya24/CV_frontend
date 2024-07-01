@@ -5,7 +5,7 @@
         class="text-blue-950 text-center text-5xl font-semibold my-20"
         style="text-shadow: 0 0px 10px rgb(23, 37, 84, 0.4)"
       >
-        CV Templates
+        {{ $t("template") }}
       </h3>
       <swiper
         :effect="'coverflow'"

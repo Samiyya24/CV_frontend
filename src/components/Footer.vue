@@ -9,16 +9,16 @@
         >
           <input
             type="text"
-            placeholder="Name"
+            :placeholder="$t('name')"
             class="p-3 text-blue-950 bg-white rounded-md w-[53%]  placeholder-[#C4C4C4] mt-5"
           />
           <input
             type="email"
-            placeholder="Email"
+            :placeholder="$t('email')"
             class="p-3 text-blue-950 w-[45%] bg-white rounded-md  placeholder-[#C4C4C4] mt-5"
           />
           <textarea
-            placeholder="Your feedback"
+            :placeholder="$t('feedback')"
             rows="3"
             class="w-[35%] rounded p-3 bg-white text-blue-950 placeholder-[#C4C4C4] mt-5"
             style="resize: none"
@@ -27,7 +27,7 @@
             <input id="submit"
               type="submit"
               class="px-[33px] py-3 rounded-md bg-blue-900 mt-[30px] hover:text-[#fff] hover:shadow-none duration-300 shadow-lg"
-              value="Submit"
+              :value="$t('submit')"
             />
           </div>
         </form>
@@ -37,11 +37,11 @@
         <div class="flex flex-col absolute z-50 top-[60%] left-0 gap-5">
           <a target="_blank" href="https://github.com/Samiyya24/CV_frontend" class="flex duration-300 gap-10 items-center cursor-pointer">
             <img class="w-[50px] duration-300 shad rounded-full" src="/github.svg" alt="">
-            <p>Source code</p>
+            <p>{{ $t("code") }}</p>
           </a>
           <a target="_blank" href="https://t.me/resume_templates_channel" class=" flex duration-300 gap-10 items-center cursor-pointer">
             <img class="w-[50px] duration-300 shad rounded-full" src="/tg.svg" alt="">
-            <p>Telegram channel</p>
+            <p>{{ $t("tg") }}</p>
           </a>
         </div>
         <!-- End Social Network Links -->
@@ -50,7 +50,8 @@
         style="border-top: 1px solid #666"
         class="py-5 max-md:text-sm max-md:flex justify-center items-center"
       >
-        Copyright &#x00A9; Resume 2024
+      {{ $t("copy") }}
+        <!-- Copyright &#x00A9; Resume 2024 -->
       </p>
     </div>
   </div>

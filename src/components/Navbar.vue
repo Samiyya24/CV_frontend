@@ -33,7 +33,6 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
-
 </script>
 
 <template>
@@ -64,42 +63,41 @@ onUnmounted(() => {
               @click="handleClick"
               class="text-lg text-blue-950 transition duration-700 hover:animate-bounce"
               href="#"
-              >Create Resume</a
+              >{{ $t("cv") }}</a
             >
             <a
               @click="handleClick"
               class="text-lg text-blue-950 transition duration-700 hover:animate-bounce"
               href="#"
-              >Resume Templates</a
+              >{{ $t("template") }}</a
             >
             <a
               @click="handleClick"
               class="text-lg text-blue-950 transition duration-700 hover:animate-bounce"
               href="#"
-              >Contact</a
+            >
+              {{ $t("contact") }}</a
             >
           </div>
           <!-- Login button -->
-          <div class="flex gap-10">
-            <!-- <button class="text-white text-xl">
-              {{ $t("test") }}
-            </button>
-            <select
-              :value="$i18n.locale"
-              @change="changeLocale($event.target.value)"
-              class="border p-2 rounded"
-            >
-              <option value="en">English</option>
-              <option value="ru">Russian</option>
-              <option value="uz">Uzbek</option>
-            </select> -->
+          <div class="flex gap-10 items-center">
             <button
               id="contact"
               @click="handleClick"
               class="px-8 py-1.5 text-xl text-white rounded-full transition-colors duration-300 hover:animate-wiggle"
             >
-              Log In
+              {{ $t("login") }}
             </button>
+            <select
+              id="lang"
+              class="outline-none p-2 px-5 text-blue-950 border-none rounded-full"
+              v-model="$i18n.locale"
+              name=""
+            >
+              <option class="text-blue-950 border-none" value="en">en</option>
+              <option class="text-blue-950 border-none" value="uz">uz</option>
+              <option class="text-blue-950 border-none" value="ru">ru</option>
+            </select>
           </div>
         </div>
       </div>
@@ -126,6 +124,14 @@ a {
     rgba(255, 255, 255, 0) 30%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+
+#lang {
+  box-shadow: 0 0 5px 0 rgba(225, 255, 255, 0.9);
+  text-shadow: 0 0px 10px rgb(23, 37, 84, 0.2);
+}
+#lang:hover {
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.9);
 }
 
 #backBlur {
