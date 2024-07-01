@@ -41,9 +41,15 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div id="backColor" class="fixed z-10 top-0 left-0 w-full">
+  <div
+    class="dark:bg-gradient-backColor_two bg-gradient-backColors fixed z-10 top-0 left-0 w-full"
+  >
     <div
-      :class="isScrolled ? 'backdrop-blur-lg bg-white/30 dark:bg-backColor' : ' dark:bg-backColor'"
+      :class="
+        isScrolled
+          ? 'backdrop-blur-lg bg-white/30'
+          : ' dark:bg-gradient-backColor bg-black/5 shadow-gradient-shadow'
+      "
       id="backBlur"
       class="flex justify-center"
     >
@@ -51,7 +57,7 @@ onUnmounted(() => {
         <!-- Progress bar -->
         <div
           style="border-radius: 0 50% 50% 0"
-          class="h-1.5 bg-blue-950 absolute top-0 left-0"
+          class="h-1.5 bg-blue-950 dark:bg-white/70 absolute top-0 left-0"
           :class="progressBarWidth"
         ></div>
         <div class="flex justify-between items-center py-1">
@@ -66,19 +72,19 @@ onUnmounted(() => {
           <div class="flex items-center gap-10">
             <a
               @click="handleClick"
-              class="text-lg text-blue-950 transition duration-700 hover:animate-bounce"
+              class="text-lg text-blue-950 dark:text-white transition duration-700 hover:animate-bounce"
               href="#"
               >{{ $t("cv") }}</a
             >
             <a
               @click="handleClick"
-              class="text-lg text-blue-950 transition duration-700 hover:animate-bounce"
+              class="text-lg text-blue-950 dark:text-white transition duration-700 hover:animate-bounce"
               href="#"
               >{{ $t("template") }}</a
             >
             <a
               @click="handleClick"
-              class="text-lg text-blue-950 transition duration-700 hover:animate-bounce"
+              class="text-lg text-blue-950 dark:text-white transition duration-700 hover:animate-bounce"
               href="#"
             >
               {{ $t("contact") }}</a
@@ -87,24 +93,26 @@ onUnmounted(() => {
           <!-- Login button -->
           <div class="flex gap-10 items-center">
             <button
-              id="contact"
               @click="handleClick"
-              class="px-8 py-1.5 text-xl text-white rounded-full transition-colors duration-300 hover:animate-wiggle"
+              :class="isScrolled ? 'dark:bg-blue-950/30' : ' '"
+              class="px-8 contactshad py-1.5 text-xl text-white dark:text-blue-950 rounded-full transition-colors duration-300 hover:animate-wiggle"
             >
               {{ $t("login") }}
             </button>
             <select
-              id="lang"
-              class="outline-none p-2 px-5 text-blue-950 border-none rounded-full"
+
+              :class="isScrolled ? 'dark:bg-blue-950/30' : 'dark:bg-transparent'"
+              class="outline-none contactshad p-2 px-5  text-blue-950 border-none rounded-full"
               v-model="$i18n.locale"
               name=""
             >
-              <option class="text-blue-950 border-none" value="en">en</option>
-              <option class="text-blue-950 border-none" value="uz">uz</option>
-              <option class="text-blue-950 border-none" value="ru">ru</option>
+              <option class="text-blue-950 border-none" value="EN">EN</option>
+              <option class="text-blue-950 border-none" value="UZ">UZ</option>
+              <option class="text-blue-950 border-none" value="RU">RU</option>
             </select>
-            <button @click="toggleDark()">
-              <span class="ml-2 text-white text-2xl">{{ isDark ? "Dark" : "Light" }}</span>
+            <button @click="toggleDark(), handleClick()">
+              <img  class="ml-2 rounded-full dark:text-blue-950 text-white text-2xl"
+                :src="isDark ? '/light.svg' : 'dark.svg'">
             </button>
           </div>
         </div>
@@ -114,25 +122,26 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-#contact {
+.contactshad {
   box-shadow: 0 0 5px 0 rgba(225, 255, 255, 0.9);
   text-shadow: 0 0px 10px rgb(255, 255, 255, 0.2);
 }
-#contact:hover {
+.contactshad:hover {
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.9);
 }
 a {
   text-shadow: 0 0px 10px rgb(23, 37, 84, 0.2);
 }
-#backColor {
+/* .backColors {
   background: linear-gradient(
     -45deg,
     rgba(23, 37, 84, 0.9) 0%,
-    rgba(23, 37, 84, 0.9) 30%,
-    rgba(255, 255, 255, 0) 30%,
+    rgba(23, 37, 84, 0.9) 38%,
+    rgba(255, 255, 255, 0) 38%,
     rgba(255, 255, 255, 0) 100%
   );
-}
+} */
+
 
 #lang {
   box-shadow: 0 0 5px 0 rgba(225, 255, 255, 0.9);

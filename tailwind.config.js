@@ -27,7 +27,22 @@ export default {
       },
       backgroundImage: {
         "gradient-backColor":
-          "linear-gradient(-45deg, rgba(23, 37, 84, 0.9) 0%, rgba(23, 37, 84, 0.9) 30%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%)",
+          "linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 38%, rgba(23, 37, 84, 0.9) 38%, rgba(23, 37, 84, 0.9) 100%)",
+        "gradient-backColor_two":
+          "linear-gradient(-45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 38%, rgba(23, 37, 84, 0.9) 38%, rgba(23, 37, 84, 0.9) 100%)",
+        "gradient-backColors":
+          "linear-gradient(-45deg, rgba(23, 37, 84, 1) 0%, rgba(23, 37, 84, 1) 38%, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0) 100%)",
+        "gradient-backColor_contact":
+          "linear-gradient(45deg, rgba(23, 37, 84, 1) 0%, rgba(23, 37, 84, 1) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%)",
+        "gradient-backColor_contact_dark":
+          "linear-gradient(45deg, rgba(23, 37, 84, 1) 0%, rgba(23, 37, 84, 1) 50%, rgba(23, 37, 84, .3) 50%, rgba(23, 37, 84, .3) 100%)",
+      },
+      backgroundColor: {
+        dark_bg: "rgba(255, 255, 255, 0.4)",
+      },
+      boxShadow: {
+        "gradient-shadow":
+          "0 2px 8px -1px rgba(23, 37, 84, 0.9), 0 2px 8px -1px rgba(255, 255, 255, 0.9)",
       },
     },
   },

@@ -1,26 +1,26 @@
 <template>
-  <div id="contact" class="bg-blue-950 pt-[50px]">
+  <div id="contact" class="bg-gradient-backColor_contact dark:bg-gradient-backColor_contact_dark shadow-gradient-shadow pt-[50px]">
     <div class="container text-[#fff] relative">
       <div class="flex items-center justify-between pb-10 flex-row-reverse relative">
         <!-- Form -->
         <form
-          @submit.prevent="add"
+          @submit.prevent=""
           class="p-[30px] pt-[60px] w-[90%] flex flex-col justify-center items-end md:rounded-[10px] max-md:hidden"
         >
           <input
             type="text"
             :placeholder="$t('name')"
-            class="p-3 text-blue-950 bg-white rounded-md w-[53%]  placeholder-[#C4C4C4] mt-5"
+            class="p-3 text-blue-950 bg-white dark:text-white dark:bg-dark_bg rounded-md w-[53%]  placeholder-[#C4C4C4] mt-5"
           />
           <input
             type="email"
             :placeholder="$t('email')"
-            class="p-3 text-blue-950 w-[45%] bg-white rounded-md  placeholder-[#C4C4C4] mt-5"
+            class="p-3 text-blue-950 w-[45%] bg-white dark:text-white dark:bg-dark_bg rounded-md  placeholder-[#C4C4C4] mt-5"
           />
           <textarea
             :placeholder="$t('feedback')"
             rows="3"
-            class="w-[35%] rounded p-3 bg-white text-blue-950 placeholder-[#C4C4C4] mt-5"
+            class="w-[35%] rounded p-3 bg-white dark:text-white dark:bg-dark_bg text-blue-950 placeholder-[#C4C4C4] mt-5"
             style="resize: none"
           ></textarea>
           <div class="flex items-center justify-center">
@@ -58,16 +58,7 @@
 </template>
 
 <style scoped>
-#contact {
-  /* Rotate the gradient by 45 degrees */
-  background: linear-gradient(
-    45deg,
-    rgba(23, 37, 84, 1) 0%,
-    rgba(23, 37, 84, 1) 50%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
+
 
 a:hover .shad {
   box-shadow: 0 0 10px 0 white;

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex mt-[7.5rem] h-[600px] justify-center">
+  <div class="w-full flex pt-[7rem] h-[600px] dark:bg-blue-950 justify-center">
     <div class="container flex items-center justify-between">
       <swiper
         spaceBetween="30"

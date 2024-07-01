@@ -1,12 +1,12 @@
-import ru from '../lang/ru'
-import uz from '../lang/uz'
-import en from '../lang/en'
+import RU from '../lang/ru'
+import UZ from '../lang/uz'
+import EN from '../lang/en'
 import { createI18n } from 'vue-i18n'
 
 const i18n = createI18n({
-  locale: 'en',
+  locale: 'EN',
   messages: {
-    ru, uz, en
+    RU, UZ, EN
   }
 })
 
