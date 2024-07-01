@@ -6,7 +6,7 @@ import router from "./routes/route";
 
 const app = createApp(App);
 const pinia = createPinia();
-
+console.log('hello');
 
 app.use(pinia);
 app.use(router);
