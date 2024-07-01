@@ -1,6 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
+import { useDark, useToggle } from "@vueuse/core";
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+
 const progressBarWidth = ref("w-0");
 let timeoutId = null;
 
@@ -38,7 +43,7 @@ onUnmounted(() => {
 <template>
   <div id="backColor" class="fixed z-10 top-0 left-0 w-full">
     <div
-      :class="isScrolled ? 'backdrop-blur-lg bg-white/30' : 'bg-black/5'"
+      :class="isScrolled ? 'backdrop-blur-lg bg-white/30 dark:bg-backColor' : ' dark:bg-backColor'"
       id="backBlur"
       class="flex justify-center"
     >
@@ -98,6 +103,9 @@ onUnmounted(() => {
               <option class="text-blue-950 border-none" value="uz">uz</option>
               <option class="text-blue-950 border-none" value="ru">ru</option>
             </select>
+            <button @click="toggleDark()">
+              <span class="ml-2 text-white text-2xl">{{ isDark ? "Dark" : "Light" }}</span>
+            </button>
           </div>
         </div>
       </div>
