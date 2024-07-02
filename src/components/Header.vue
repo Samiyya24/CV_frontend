@@ -13,19 +13,19 @@
         class="mySwiper"
       >
         <swiper-slide>
-          <img class="w-[40%]" src="/resume.png" alt="" />
+          <img class="w-[20%] h-[10%]" src="/resume.png" alt="" />
         </swiper-slide>
         <swiper-slide>
-          <img class="w-[40%]" src="/resume2.png" alt="" />
+          <img class="w-[20%] h-[10%]" src="/resume2.png" alt="" />
         </swiper-slide>
         <swiper-slide>
-          <img class="w-[40%]" src="/resume3.png" alt="" />
+          <img class="w-[20%] h-[10%]" src="/resume3.png" alt="" />
         </swiper-slide>
         <swiper-slide>
-          <img class="w-[40%]" src="/resume4.png" alt="" />
+          <img class="w-[20%] h-[10%]" src="/resume4.png" alt="" />
         </swiper-slide>
         <swiper-slide>
-          <img class="w-[40%]" src="/resume5.png" alt="" />
+          <img class="w-[20%] h-[10%]" src="/resume5.png" alt="" />
         </swiper-slide>
       </swiper>
     </div>
@@ -47,7 +47,7 @@ const modules = [Autoplay, Pagination, Navigation];
 .container {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 550px;
   overflow: hidden;
 }
 
@@ -74,6 +74,7 @@ const modules = [Autoplay, Pagination, Navigation];
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 700px;
 }
 
 /* Ensure images fill the slide completely */
