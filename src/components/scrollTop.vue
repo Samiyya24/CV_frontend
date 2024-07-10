@@ -4,7 +4,7 @@
       <button
         @click="scrollToTop"
         :class="{ 'scale-0': isNearTop, 'scale-100': !isNearTop }"
-        class="duration-500 rounded-full w-[50px] h-[50px] z-20 backdrop-blur-lg bg-blue-950/50 hover:bg-blue-950 absolute text-4xl flex items-center justify-center bottom-0 right-0 -translate-y-1/2"
+        class="duration-500 rounded-full w-[50px] dark:hover:shadow-gradient-shadow h-[50px] z-20 backdrop-blur-lg bg-blue-950/50 hover:bg-blue-950 absolute text-4xl flex items-center justify-center bottom-0 right-0 -translate-y-1/2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

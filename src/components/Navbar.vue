@@ -28,11 +28,14 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
 };
 
+const lang = ref("EN");
+
+const changeLang = (lan) => {
+  lang.value = lang;
+};
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
-  // const changeLocale = (selectedLocale) => {
-  //   locale.value = selectedLocale;
-  // };
 });
 
 onUnmounted(() => {
@@ -100,20 +103,61 @@ onUnmounted(() => {
               {{ $t("login") }}
             </button>
             <select
-
-              :class="isScrolled ? 'dark:bg-blue-950/30' : 'dark:bg-transparent'"
-              class="outline-none contactshad p-2 px-5  text-blue-950 border-none rounded-full"
+              :class="
+                isScrolled ? 'dark:bg-blue-950/30' : 'dark:bg-transparent'
+              "
+              class="outline-none contactshad p-2 px-5 text-blue-950 border-none rounded-full"
               v-model="$i18n.locale"
               name=""
             >
-              <option class="text-blue-950 border-none" value="EN">EN</option>
-              <option class="text-blue-950 border-none" value="UZ">UZ</option>
-              <option class="text-blue-950 border-none" value="RU">RU</option>
+              <option class="rounded-full text-blue-950 border-none" value="EN">
+                EN
+              </option>
+              <option class="rounded-full text-blue-950 border-none" value="UZ">
+                UZ
+              </option>
+              <option class="rounded-full text-blue-950 border-none" value="RU">
+                RU
+              </option>
             </select>
-            <button @click="toggleDark(), handleClick()">
-              <img  class="ml-2 rounded-full dark:text-blue-950 text-white text-2xl"
-                :src="isDark ? '/light.svg' : 'dark.svg'">
-            </button>
+            <div
+              :class="
+                isScrolled ? 'dark:bg-blue-950/30' : 'dark:bg-transparent'
+              "
+              :value="lang"
+              class="outline-none contactshad p-2 px-5 text-blue-950 border-none rounded-full"
+            >
+              EN
+              <p
+                @click="changeLang('EN')"
+                class="rounded-full text-blue-950 border-none"
+                :class="false ? 'scale-100 h-full' : 'h-0 scale-0'"
+              >
+                EN
+              </p>
+              <p
+                @click="changeLang('UZ')"
+                class="rounded-full text-blue-950 border-none"
+                :class="false ? 'scale-100 h-full' : 'h-0 scale-0'"
+              >
+                UZ
+              </p>
+              <p
+                @click="changeLang('RU')"
+                class="rounded-full text-blue-950 border-none"
+                :class="false ? 'scale-100 h-full' : 'h-0 scale-0'"
+              >
+                RU
+              </p>
+            </div>
+            <transition name="fade" mode="out-in" appear>
+              <button @click="toggleDark(), handleClick()">
+                <img
+                  class="ml-2 rounded-full dark:text-blue-950 text-white text-2xl"
+                  :src="isDark ? '/light.svg' : 'dark.svg'"
+                />
+              </button>
+            </transition>
           </div>
         </div>
       </div>
@@ -122,6 +166,15 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 300ms;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .contactshad {
   box-shadow: 0 0 5px 0 rgba(225, 255, 255, 0.9);
   text-shadow: 0 0px 10px rgb(255, 255, 255, 0.2);
@@ -141,7 +194,6 @@ a {
     rgba(255, 255, 255, 0) 100%
   );
 } */
-
 
 #lang {
   box-shadow: 0 0 5px 0 rgba(225, 255, 255, 0.9);
